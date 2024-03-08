@@ -34,12 +34,66 @@ const guitarra6 = new guitarra( "Fender", "Telecaster", 1986, 2800, 1, true)
 
 const guitarras = [guitarra1, guitarra2, guitarra3, guitarra4]
 
-document.getElementById('gtr1').addEventListener('click', () => {  mostrarInfoGuitarra(guitarra1); agregarGuitarraSeleccionada(guitarra1);});
-document.getElementById('gtr2').addEventListener('click', () => { mostrarInfoGuitarra(guitarra2); agregarGuitarraSeleccionada(guitarra2);});
-document.getElementById('gtr3').addEventListener('click', () =>{ mostrarInfoGuitarra(guitarra3); agregarGuitarraSeleccionada(guitarra3);});
-document.getElementById('gtr4').addEventListener('click', () => {  mostrarInfoGuitarra(guitarra4); agregarGuitarraSeleccionada(guitarra4);});
-document.getElementById('gtr5').addEventListener('click', () => { mostrarInfoGuitarra(guitarra5); agregarGuitarraSeleccionada(guitarra5);});
-document.getElementById('gtr6').addEventListener('click', () =>{ mostrarInfoGuitarra(guitarra6); agregarGuitarraSeleccionada(guitarra6);});
+document.getElementById('gtr1').addEventListener('click', () => {  mostrarInfoGuitarra(guitarra1); agregarGuitarraSeleccionada(guitarra1);
+    Toastify({
+        text: "Agregaste Ibanez RG al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
+document.getElementById('gtr2').addEventListener('click', () => { mostrarInfoGuitarra(guitarra2); agregarGuitarraSeleccionada(guitarra2);
+    Toastify({
+        text: "Agregaste Fender Stratocaster al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
+document.getElementById('gtr3').addEventListener('click', () =>{ mostrarInfoGuitarra(guitarra3); agregarGuitarraSeleccionada(guitarra3);
+    Toastify({
+        text: "Agregaste Gibson Les Paul al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
+document.getElementById('gtr4').addEventListener('click', () => {  mostrarInfoGuitarra(guitarra4); agregarGuitarraSeleccionada(guitarra4);
+    Toastify({
+        text: "Agregaste Music Man Majesty al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
+document.getElementById('gtr5').addEventListener('click', () => { mostrarInfoGuitarra(guitarra5); agregarGuitarraSeleccionada(guitarra5);
+    Toastify({
+        text: "Agregaste PRS SE al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
+document.getElementById('gtr6').addEventListener('click', () =>{ mostrarInfoGuitarra(guitarra6); agregarGuitarraSeleccionada(guitarra6);
+    Toastify({
+        text: "Agregaste Fender Telecaster al carrito",
+        className: "info",
+        style: {
+          background: "#a52a2a",
+        }
+      }).showToast();
+
+});
 
 
 
@@ -84,12 +138,21 @@ function agregarGuitarraSeleccionada(guitarra) {
     
     agregarAlCarrito(guitarrasSeleccionadas);
 
-    const continuarComprando = confirm("¿Desea seguir comprando?");
-    if (!continuarComprando) {
-        console.log("Saliendo de la tienda.");
-        
-    }
 
+
+
+      Swal.fire({
+        title: "¿Desea seguir comprando?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Si!",
+        denyButtonText: `No, gracias`
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isDenied) {
+          Swal.fire("Adios");
+        }
+      });
 }
 
 
