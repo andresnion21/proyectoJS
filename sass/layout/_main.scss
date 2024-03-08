@@ -55,6 +55,13 @@
 //Main Carrito
 
 .carrito{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
     h1{
         text-align: center;
         font-weight: bold;
@@ -76,6 +83,26 @@
             border-radius: 5%;
         }
     }
+
+
+    .gtr-carrito{
+
+        margin-top: 4rem;
+
+    }
+
+    .volver-inicio{
+        margin-top: 4rem;
+
+        a{
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            color: brown;
+
+        }
+    }
+
 }
 
 

@@ -40,18 +40,30 @@ body {
     color: brown;
     text-decoration: none; }
 
-.carrito h1 {
-  text-align: center;
-  font-weight: bold;
-  color: #c9422a;
-  margin-top: 5rem; }
-
-.carrito .botones {
+.carrito {
   display: flex;
-  justify-content: center;
-  margin-top: 4rem; }
-  .carrito .botones button {
-    margin: 1rem;
-    padding: 0.5rem;
+  flex-direction: column;
+  align-items: center; }
+  .carrito h1 {
+    text-align: center;
     font-weight: bold;
-    border-radius: 5%; }
+    color: #c9422a;
+    margin-top: 5rem; }
+  .carrito .botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem; }
+    .carrito .botones button {
+      margin: 1rem;
+      padding: 0.5rem;
+      font-weight: bold;
+      border-radius: 5%; }
+  .carrito .gtr-carrito {
+    margin-top: 4rem; }
+  .carrito .volver-inicio {
+    margin-top: 4rem; }
+    .carrito .volver-inicio a {
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: bold;
+      color: brown; }
