@@ -95,6 +95,45 @@ document.getElementById('gtr6').addEventListener('click', () =>{ mostrarInfoGuit
 
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  
+  const infoButtons = document.querySelectorAll('[id^="info"]');
+  
+  
+  infoButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const guitarraId = button.id.replace('info', ''); 
+      
+      fetch('guitarras.json')
+        .then(response => response.json())
+        .then(data => {
+          const guitarra = data[guitarraId - 1]; 
+          mostrarInformacionGuitarra(guitarra); 
+        })
+        .catch(error => console.error('No se pudo cargar los datos:', error));
+    });
+  });
+});
+
+function mostrarInformacionGuitarra(guitarra) {
+
+  const mensaje = `
+    <h3>${guitarra.marca} ${guitarra.modelo}</h3>
+    <p>Color: ${guitarra.color}</p>
+    <p>Año: ${guitarra.año}</p>
+    <p>Precio: $${guitarra.precio}</p>
+  `;
+
+
+  Swal.fire({
+    html: mensaje,
+    icon: 'success',
+    confirmButtonText: 'Cerrar'
+  });
+}
+
+
+
 
 
 
@@ -144,13 +183,13 @@ function agregarGuitarraSeleccionada(guitarra) {
       Swal.fire({
         title: "¿Desea seguir comprando?",
         showDenyButton: true,
-        showCancelButton: true,
+  
         confirmButtonText: "Si!",
         denyButtonText: `No, gracias`
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isDenied) {
-          Swal.fire("Adios");
+          Swal.fire("Gracias por confiar en nosotros!");
         }
       });
 }

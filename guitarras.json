@@ -1,0 +1,57 @@
+[
+    {
+        "marca": "Ibanez",
+        "modelo": "RG",
+        "color": "Blanca",
+        "año": 2015,
+        "precio": 1200
+      },
+      
+    {
+      "marca": "Fender",
+      "modelo": "Stratocaster",
+      "color": "Sunburst",
+      "año": 1989,
+      "precio": 1500
+    },
+    {
+      "marca": "Gibson",
+      "modelo": "Les Paul",
+      "color": "Negro",
+      "año": 1973,
+      "precio": 2500
+    },
+    
+ 
+
+      {
+        "marca": "Music Man",
+        "modelo": "Majesty",
+        "color": "Negro",
+        "año": 2020,
+        "precio": 2000  
+      },
+
+      {
+        "marca": "PRS",
+        "modelo": "SE",
+        "color": "Rojo",
+        "año": 2024,
+        "precio": 1500
+      },
+
+      {
+        "marca": "Fender",
+        "modelo": "Telecaster",
+        "color": "Suburst",
+        "año": 1986,
+        "precio": 2800
+      }
+  
+  
+  
+  
+
+
+
+  ]

@@ -27,7 +27,7 @@ body {
       padding: 0.5rem;
       border-radius: 10%;
       font-weight: bold;
-      color: brown; }
+      color: #c9422a; }
 
 .ir-carrito {
   display: flex;
@@ -37,7 +37,7 @@ body {
   .ir-carrito a {
     font-size: 40px;
     font-weight: bold;
-    color: brown;
+    color: #c9422a;
     text-decoration: none; }
 
 .carrito {
@@ -51,9 +51,16 @@ body {
     margin-top: 5rem; }
   .carrito .botones {
     display: flex;
-    justify-content: center;
-    margin-top: 4rem; }
+    justify-content: center; }
     .carrito .botones button {
+      margin: 1rem;
+      padding: 0.5rem;
+      font-weight: bold;
+      border-radius: 5%; }
+  .carrito .compra-final {
+    margin-top: 4rem; }
+    .carrito .compra-final button {
+      width: 80%;
       margin: 1rem;
       padding: 0.5rem;
       font-weight: bold;
@@ -66,4 +73,4 @@ body {
       text-decoration: none;
       font-size: 30px;
       font-weight: bold;
-      color: brown; }
+      color: #c9422a; }
