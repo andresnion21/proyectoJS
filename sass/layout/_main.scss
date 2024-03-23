@@ -39,13 +39,18 @@ main{
 
 
         @include mobile{
-            width: 45%;
+            width: 80%;
             margin-bottom: 1rem;
         }
 
         h3{
             margin: 2rem;
             font-size: 25px;
+
+            @include tablet{
+
+                font-size: 15px;
+            }
         }
 
         .img-gtr{

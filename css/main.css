@@ -50,11 +50,14 @@ main {
     align-items: center; }
     @media screen and (max-width: 576px) {
       .conteiner .guitarra {
-        width: 45%;
+        width: 80%;
         margin-bottom: 1rem; } }
     .conteiner .guitarra h3 {
       margin: 2rem;
       font-size: 25px; }
+      @media screen and (max-width: 992px) {
+        .conteiner .guitarra h3 {
+          font-size: 15px; } }
     .conteiner .guitarra .img-gtr {
       display: flex;
       justify-content: center;
