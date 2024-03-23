@@ -1,12 +1,29 @@
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
 
-.menu{
+    border-bottom: 1px solid #ddd;
+
+    .brand{
+        color:  crimson;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+    .menu{
     
-    justify-content: flex-end;
+        justify-content: flex-end;
+    
+    
+            .contacto{
+                margin-right: 2rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+            }
+    }
+    
 
-
-        .contacto{
-            margin-right: 2rem;
-        }
 }
-

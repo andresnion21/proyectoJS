@@ -1,11 +1,29 @@
 
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
+.title{
+    text-align: center;
+
+    margin-top: 3rem;
+    font-weight: bold;
+    color:  #0072BF; 
+    
+}
 
 .conteiner{
     display: flex;
     justify-content: space-evenly;
     margin-top: 6rem;
+
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+        
 
 
     .guitarra{
@@ -20,12 +38,54 @@
         align-items: center;
 
 
+        @include mobile{
+            width: 45%;
+            margin-bottom: 1rem;
+        }
+
+        h3{
+            margin: 2rem;
+            font-size: 25px;
+        }
+
+        .img-gtr{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            img{
+                max-width: 100%; 
+                height: auto; 
+
+            }
+        }
+
         button{
-            margin-top: 2rem;
+            margin-top: 1rem;
             padding: 0.5rem;
             border-radius: 10%;
+            font-size: 20px;
             font-weight: bold;
-            color:  rgb(201, 66, 42); 
+            color:  #0072BF; 
+
+            &:hover{
+                background-color: #3b7d1a;
+                color: whitesmoke;
+                transition: 300ms;
+            }
+        }
+
+        .btn-info{
+            color: black;
+            font-size: 10px;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+
+            &:hover{
+                background-color: #0072BF;
+                color: whitesmoke;
+                transition: 300ms;
+            }
         }
 
     }
@@ -41,13 +101,40 @@
     margin-bottom: 10rem;
     
     a{
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
-        color:  rgb(201, 66, 42) ;
+        color:  #0072BF ;
         text-decoration: none;
+
+        &:hover{
+            color: crimson;
+            transition: 200ms;
+        }
 
         
     }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    
+        .img-carrito{
+
+            .car{
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: 15%;
+                }
+
+            }
+
+
+        }
+}
 }
 
 
@@ -65,7 +152,7 @@
     h1{
         text-align: center;
         font-weight: bold;
-        color:  rgb(201, 66, 42)  ;
+        color: #0072BF  ;
         margin-top: 5rem;
     }
 
@@ -81,6 +168,14 @@
             padding: 0.5rem;
             font-weight: bold;
             border-radius: 5%;
+
+            &:hover{
+                background-color: #0072BF;
+                color: whitesmoke;
+                transition: 300ms;
+            }
+
+            
         }
     }
 
@@ -94,6 +189,11 @@
             font-weight: bold;
             border-radius: 5%;
             
+            &:hover{
+                background-color: #3b7d1a;
+                color: whitesmoke;
+                transition: 300ms;
+            }
         }
 
     }
@@ -112,7 +212,12 @@
             text-decoration: none;
             font-size: 30px;
             font-weight: bold;
-            color:  rgb(201, 66, 42);
+            color:  #0072BF;
+
+            &:hover{
+                color: crimson;
+                transition: 200ms;
+            }
 
         }
     }

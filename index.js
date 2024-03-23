@@ -15,7 +15,7 @@ class guitarra{
     }
 
     siHayStock(){
-        console.log( this.cantidad > 0 );
+        return( this.cantidad > 0 );
     }
 
     descontarUnidad(unidad){
@@ -24,11 +24,11 @@ class guitarra{
     }
 }
 
-const guitarra1 = new guitarra("Ibanez", "RG", 2015, 1200, 4, true)
+const guitarra1 = new guitarra("Ibanez", "RG", 2015, 1200, 2, true)
 const guitarra2 = new guitarra("Fender", "Stratocaster", 1989, 1500, 1, true)
-const guitarra3 = new guitarra("Gibson", "Les Paul", 1973, 2500, 3, true)
+const guitarra3 = new guitarra("Gibson", "Les Paul", 1973, 2500, 1, true)
 const guitarra4 = new guitarra("Musicman", "Majesty", 2020, 2000, 2, true)
-const guitarra5 = new guitarra("PRS" , "SE", 2024 ,1500,  2, true)
+const guitarra5 = new guitarra("PRS" , "SE", 2024 ,1500,  3, true)
 const guitarra6 = new guitarra( "Fender", "Telecaster", 1986, 2800, 1, true)
 
 

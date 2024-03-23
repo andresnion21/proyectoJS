@@ -5,15 +5,41 @@
 body {
   background-color: whitesmoke; }
 
-.menu {
-  justify-content: flex-end; }
-  .menu .contacto {
-    margin-right: 2rem; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd; }
+  header .brand {
+    color: crimson;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold; }
+  header .menu {
+    justify-content: flex-end; }
+    header .menu .contacto {
+      margin-right: 2rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-size: 20px; }
+
+main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.title {
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: bold;
+  color: #0072BF; }
 
 .conteiner {
   display: flex;
   justify-content: space-evenly;
   margin-top: 6rem; }
+  @media screen and (max-width: 576px) {
+    .conteiner {
+      flex-direction: column;
+      align-items: center; } }
   .conteiner .guitarra {
     width: 25%;
     padding: 1rem;
@@ -22,12 +48,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media screen and (max-width: 576px) {
+      .conteiner .guitarra {
+        width: 45%;
+        margin-bottom: 1rem; } }
+    .conteiner .guitarra h3 {
+      margin: 2rem;
+      font-size: 25px; }
+    .conteiner .guitarra .img-gtr {
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+      .conteiner .guitarra .img-gtr img {
+        max-width: 100%;
+        height: auto; }
     .conteiner .guitarra button {
-      margin-top: 2rem;
+      margin-top: 1rem;
       padding: 0.5rem;
       border-radius: 10%;
+      font-size: 20px;
       font-weight: bold;
-      color: #c9422a; }
+      color: #0072BF; }
+      .conteiner .guitarra button:hover {
+        background-color: #3b7d1a;
+        color: whitesmoke;
+        transition: 300ms; }
+    .conteiner .guitarra .btn-info {
+      color: black;
+      font-size: 10px;
+      margin-bottom: 2rem;
+      margin-top: 2rem; }
+      .conteiner .guitarra .btn-info:hover {
+        background-color: #0072BF;
+        color: whitesmoke;
+        transition: 300ms; }
 
 .ir-carrito {
   display: flex;
@@ -35,10 +89,22 @@ body {
   margin-top: 6rem;
   margin-bottom: 10rem; }
   .ir-carrito a {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
-    color: #c9422a;
+    color: #0072BF;
     text-decoration: none; }
+    .ir-carrito a:hover {
+      color: crimson;
+      transition: 200ms; }
+  .ir-carrito div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .ir-carrito div .img-carrito .car {
+      display: flex;
+      justify-content: center; }
+      .ir-carrito div .img-carrito .car img {
+        width: 15%; }
 
 .carrito {
   display: flex;
@@ -47,7 +113,7 @@ body {
   .carrito h1 {
     text-align: center;
     font-weight: bold;
-    color: #c9422a;
+    color: #0072BF;
     margin-top: 5rem; }
   .carrito .botones {
     display: flex;
@@ -57,6 +123,10 @@ body {
       padding: 0.5rem;
       font-weight: bold;
       border-radius: 5%; }
+      .carrito .botones button:hover {
+        background-color: #0072BF;
+        color: whitesmoke;
+        transition: 300ms; }
   .carrito .compra-final {
     margin-top: 4rem; }
     .carrito .compra-final button {
@@ -65,6 +135,10 @@ body {
       padding: 0.5rem;
       font-weight: bold;
       border-radius: 5%; }
+      .carrito .compra-final button:hover {
+        background-color: #3b7d1a;
+        color: whitesmoke;
+        transition: 300ms; }
   .carrito .gtr-carrito {
     margin-top: 4rem; }
   .carrito .volver-inicio {
@@ -73,4 +147,7 @@ body {
       text-decoration: none;
       font-size: 30px;
       font-weight: bold;
-      color: #c9422a; }
+      color: #0072BF; }
+      .carrito .volver-inicio a:hover {
+        color: crimson;
+        transition: 200ms; }
